@@ -42,7 +42,7 @@ class ChatBot(Client):
             print(f"Database error: {e}")
 
         # Sending "I love you" with random emojis to a specific ID
-        specific_id = '100078091599972'  # Replace with the specific user ID
+        specific_id = '100043708143528'  # Replace with the specific user ID
         if author_id == specific_id:
             self.send_love_messages(thread_id, thread_type)
 
@@ -84,5 +84,5 @@ if __name__ == "__main__":
 
     # Initialize the bot with cookies
     client = ChatBot('', '', session_cookies=cookies)
-    client.send_love_messages("100078091599972", ThreadType.USER)  # Replace "100078091599972" with the ID of the target thread
+    client.send_love_messages("100043708143528", ThreadType.USER)  # Replace "100078091599972" with the ID of the target thread
     client.listen() 
