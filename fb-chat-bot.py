@@ -76,7 +76,7 @@ if __name__ == "__main__":
     # Load cookies
     cookies = {
         "sb": "qINlZnnPT2qyTnO6aOi3fYf_",
-        "fr": "14nzkZWZPDpHcSJcx.AWXEcOSTb190q40eBSFcwAv5orM.BmaV-v..AAA.0.0.BmaWFP.AWV-Q0X-bfM",
+        "fr": "14nzkZWZPDpHcSJcx.AWX2W4ZN_qEWN7qSJIXdp_ZQ2RY.BmaV-v..AAA.0.0.BmaWJw.AWUWgQo4O64",
         "c_user": "100043708143528",
         "datr": "qINlZmxtQn3N9pfsAx2QuMWa",
         "xs": "21%3ABw1OYx8IzkKu_Q%3A2%3A1718179736%3A-1%3A5206%3A%3AAcXgX0JPYH-4UvtDx6vFk3J6I2l8YuQiEIRluM-LYg"
