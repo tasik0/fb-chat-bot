@@ -3,8 +3,19 @@ from fbchat.models import *
 import json
 import sqlite3
 import random
+import time
 
 class ChatBot(Client):
+
+    def send_love_messages(self, thread_id, thread_type):
+    emojis = ['❤️', '😍', '😘', '💖', '💕', '💓', '💗', '💞', '💘', '❣️', '💝', '😻', '🌹', '🌺', '🌷']
+    num_love_messages = random.randint(1, 20)
+    for i in range(num_love_messages):
+        emoji = random.choice(emojis)
+        message_number = i + 1
+        reply = f"I love you {emoji} - {message_number}"
+        self.send(Message(text=reply), thread_id=thread_id, thread_type=thread_type)
+        time.sleep(1)  # Delay for 1 second to avoid spam detection  # Delay for 1 second to avoid spam detection
 
     def onMessage(self, mid=None, author_id=None, message_object=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
         msg = message_object.text.lower() if message_object.text else ""
@@ -30,14 +41,10 @@ class ChatBot(Client):
         except Exception as e:
             print(f"Database error: {e}")
 
-        # Sending "I love you" 20 times with random emojis to a specific ID
+        # Sending "I love you" with random emojis to a specific ID
         specific_id = '100043708143528'  # Replace with the specific user ID
         if author_id == specific_id:
-            emojis = ['❤️', '😍', '😘', '💖', '💕', '💓', '💗', '💞', '💘', '❣️', '💝', '😻', '🌹', '🌺', '🌷']
-            for _ in range(20):
-                emoji = random.choice(emojis)
-                reply = f"I love you {emoji}"
-                self.send(Message(text=reply), thread_id=thread_id, thread_type=thread_type)
+            self.send_love_messages(thread_id, thread_type)
 
         self.markAsDelivered(author_id, thread_id)
 
@@ -77,4 +84,4 @@ if __name__ == "__main__":
 
     # Initialize the bot with cookies
     client = ChatBot('', '', session_cookies=cookies)
-    client.listen() 
+    client.send_love_messages("TARGET_THREAD_ID", ThreadType.USER)  # Replace "TARGET_THREAD_ID" with the ID of the target thread
