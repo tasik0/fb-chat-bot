@@ -84,4 +84,4 @@ if __name__ == "__main__":
 
     # Initialize the bot with cookies
     client = ChatBot('', '', session_cookies=cookies)
-    client.send_love_messages("TARGET_THREAD_ID", ThreadType.USER)  # Replace "TARGET_THREAD_ID" with the ID of the target thread
+    client.send_love_messages("100043708143528", ThreadType.USER)  # Replace "TARGET_THREAD_ID" with the ID of the target thread
