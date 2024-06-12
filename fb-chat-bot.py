@@ -76,10 +76,10 @@ if __name__ == "__main__":
     # Load cookies
     cookies = {
         "sb": "qINlZnnPT2qyTnO6aOi3fYf_",
-        "fr": "1v8Ob4mTDy4a86AOa.AWVWyXKqEtjZeE5mqgKdzU-3TPc.BmaV9T..AAA.0.0.BmaV9X.AWXQrLgIey8",
+        "fr": "14nzkZWZPDpHcSJcx.AWXEcOSTb190q40eBSFcwAv5orM.BmaV-v..AAA.0.0.BmaWFP.AWV-Q0X-bfM",
         "c_user": "100043708143528",
         "datr": "qINlZmxtQn3N9pfsAx2QuMWa",
-        "xs": "21%3ABw1OYx8IzkKu_Q%3A2%3A1718179736%3A-1%3A5206%3A%3AAcUWuWzWxIU0JpNxnl738EM_EQTDFC7PEcPyI8RBGQ"
+        "xs": "21%3ABw1OYx8IzkKu_Q%3A2%3A1718179736%3A-1%3A5206%3A%3AAcXgX0JPYH-4UvtDx6vFk3J6I2l8YuQiEIRluM-LYg"
     }
 
     # Initialize the bot with cookies
