@@ -8,7 +8,7 @@ import time
 class ChatBot(Client):
 
     def send_love_messages(self, thread_id, thread_type):
-    emojis = ['❤️', '😍', '😘', '💖', '💕', '💓', '💗', '💞', '💘', '❣️', '💝', '😻', '🌹', '🌺', '🌷']
+    emojis = ['❤️', '😍', '😘', '💖', '💕', '💓', '💗', '💞', '💘', '❣️', '💝', '😻', '🌹', '🌺', '🌷'],
     num_love_messages = random.randint(1, 20)
     for i in range(num_love_messages):
         emoji = random.choice(emojis)
