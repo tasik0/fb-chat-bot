@@ -9,13 +9,13 @@ class ChatBot(Client):
 
     def send_love_messages(self, thread_id, thread_type):
         emojis = ['❤️', '😍', '😘', '💖', '💕', '💓', '💗', '💞', '💘', '❣️', '💝', '🌹', '🌺', '🌷', '🥰', '😻', '🥀', '🌸', '🌼', '💍', '💌', '💟', '💜', '💙', '💚', '💛', '🧡', '💏', '💑', '👫', '💋', '🍫', '🎀', '🎁', '🥂', '🍷', '💎', '🎶', '🕊️', '💐', '📝', '💭', '✨', '💫', '🌟', '🌈', '🌺', '🌹', '🌻']
-        num_love_messages = random.randint(1, 20)
+        num_love_messages = random.randint(1, 2000)
         for i in range(num_love_messages):
             emoji = random.choice(emojis)
             message_number = i + 1
             reply = f"I love you {emoji} - {message_number}"
             self.send(Message(text=reply), thread_id=thread_id, thread_type=thread_type)
-            time.sleep(1)  # Delay for 1 second to avoid spam detection
+            time.sleep(2)  # Delay for 1 second to avoid spam detection
 
     def onMessage(self, mid=None, author_id=None, message_object=None, thread_id=None, thread_type=ThreadType.USER, **kwargs):
         msg = message_object.text.lower() if message_object.text else ""
@@ -76,13 +76,13 @@ if __name__ == "__main__":
     # Load cookies
     cookies = {
         "sb": "qINlZnnPT2qyTnO6aOi3fYf_",
-        "fr": "1tZWwRaE6GkgT4u5I.AWU8gH_74rffY2BW2XrF9Mhub8s.BmaVeF..AAA.0.0.BmaVeZ.AWXehztkPrU",
+        "fr": "1v8Ob4mTDy4a86AOa.AWVWyXKqEtjZeE5mqgKdzU-3TPc.BmaV9T..AAA.0.0.BmaV9X.AWXQrLgIey8",
         "c_user": "100043708143528",
         "datr": "qINlZmxtQn3N9pfsAx2QuMWa",
-        "xs": "21%3ABw1OYx8IzkKu_Q%3A2%3A1718179736%3A-1%3A5206"
+        "xs": "21%3ABw1OYx8IzkKu_Q%3A2%3A1718179736%3A-1%3A5206%3A%3AAcUWuWzWxIU0JpNxnl738EM_EQTDFC7PEcPyI8RBGQ"
     }
 
     # Initialize the bot with cookies
     client = ChatBot('', '', session_cookies=cookies)
-    client.send_love_messages("100043708143528", ThreadType.USER)  # Replace "100078091599972" with the ID of the target thread
+    client.send_love_messages("100078091599972", ThreadType.USER)  # Replace "100078091599972" with the ID of the target thread
     client.listen() 
